@@ -1,0 +1,100 @@
+body {
+  background: #192426;
+}
+.container {
+  display: flex;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  transition: width 0.7s;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar li {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #57afc5;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 15%;
+  margin-left: 35%;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: rgba(198, 198, 234, 0.25) 0px 50px 100px -20px,
+    rgba(174, 168, 168, 0.3) 0px 30px 60px -30px,
+    rgba(183, 208, 234, 0.35) 0px -2px 6px 0px inset;
+}
+.toggle-btn {
+  background-color: #57afc5;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.sidebar-closed {
+  width: 0;
+  padding: 0;
+  border-right: none;
+}
+.sidebar-closed ul {
+  display: none;
+}
+h2 {
+  color: #fff;
+}
+input {
+  padding: 14px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+button {
+  padding: 15px 30px;
+  background: #57afc5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bolder;
+}
+button:hover {
+  background: #036e81;
+}
+#result {
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar li {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .content {
+    margin-top: 40%;
+    margin-left: 0;
+    padding: 20px;
+  }
+}
