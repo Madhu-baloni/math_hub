@@ -11,7 +11,7 @@ togglebtn.addEventListener("click", () => {
     contentDiv.style.marginLeft = "600px";
   }
 });
-var x = window.matchMedia("(max-width: 600px)");
+var x = window.matchMedia("(max-width: 800px)");
 togglebtn.addEventListener("click", () => {
   if (x.matches) {
     if (sidebar.classList.contains("sidebar-closed")) {

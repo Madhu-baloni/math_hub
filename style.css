@@ -1,6 +1,9 @@
 body {
   background: #192426;
+  font-family: "Poppins", sans-serif;
+  color: #f0f0f0;
 }
+
 .container {
   display: flex;
 }
@@ -26,6 +29,11 @@ body {
 .sidebar a {
   text-decoration: none;
   color: #57afc5;
+  padding: 10px;
+}
+.sidebar li a:hover {
+  background-color: #036e81;
+  color: #f0f0f0;
 }
 .content {
   display: flex;
@@ -41,13 +49,19 @@ body {
   box-shadow: rgba(198, 198, 234, 0.25) 0px 50px 100px -20px,
     rgba(174, 168, 168, 0.3) 0px 30px 60px -30px,
     rgba(183, 208, 234, 0.35) 0px -2px 6px 0px inset;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  color: #fff;
 }
-.toggle-btn {
+#toggle-btn {
   background-color: #57afc5;
   color: #fff;
   border: none;
   padding: 10px;
   cursor: pointer;
+}
+#toggle-btn:hover {
+  background-color: #5ad4ea;
 }
 .sidebar-closed {
   width: 0;
@@ -59,33 +73,41 @@ body {
 }
 h2 {
   color: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 15px 0 20px 0;
 }
 input {
   padding: 14px;
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin: 15px 0 20px 0;
   border: 1px solid #ccc;
   border-radius: 2px;
 }
 button {
-  padding: 15px 30px;
+  padding: 14px;
   background: #57afc5;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bolder;
+  width: 168px;
+  margin: 15px 0 20px 0;
 }
 button:hover {
   background: #036e81;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px #57afc5;
+  transition: all 0.3s ease-in-out;
 }
 #result {
   font-weight: bold;
   font-size: 25px;
-  margin-top: 30px;
+  margin: 15px 0 20px 0;
   color: #fff;
 }
+
 
 @media screen and (max-width: 600px) {
   .sidebar li {
@@ -95,6 +117,20 @@ button:hover {
   .content {
     margin-top: 40%;
     margin-left: 0;
-    padding: 20px;
+    padding: 15px;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.content > * {
+  animation: fadeIn 0.5s ease-in;
 }
