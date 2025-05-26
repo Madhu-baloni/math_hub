@@ -28,6 +28,9 @@ contentDiv.innerHTML = `<h2>Addition</h2>
 <button id = 'calculate-sum'>Calculate</button>
 <p id ='result'></p>
 `;
+document.getElementById("num1").addEventListener("input", () => {
+  document.getElementById("result").textContent = "";
+});
 document.getElementById("calculate-sum").addEventListener("click", (e) => {
   e.preventDefault();
   const num1 = parseInt(document.getElementById("num1").value);
@@ -43,12 +46,18 @@ document.getElementById("addition").addEventListener("click", () => {
 <button id = 'calculate-sum'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("calculate-sum").addEventListener("click", (e) => {
     e.preventDefault();
     const num1 = parseInt(document.getElementById("num1").value);
     const num2 = parseInt(document.getElementById("num2").value);
     const result = num1 + num2;
     document.getElementById("result").textContent = `result : ${result}`;
+    document
+      .getElementsByTagName("input")
+      .addEventListener("input", console.log("num1,num2", num1, num2));
   });
 });
 //Subtraction
@@ -59,6 +68,9 @@ document.getElementById("subtract").addEventListener("click", () => {
 <button id = 'calculate-diff'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("calculate-diff").addEventListener("click", (e) => {
     e.preventDefault();
     const num1 = parseInt(document.getElementById("num1").value);
@@ -75,6 +87,9 @@ document.getElementById("multiply").addEventListener("click", () => {
 <button id = 'calculate-multiplication'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document
     .getElementById("calculate-multiplication")
     .addEventListener("click", (e) => {
@@ -93,6 +108,9 @@ document.getElementById("division").addEventListener("click", () => {
 <button id = 'calculate-multiplication'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document
     .getElementById("calculate-multiplication")
     .addEventListener("click", (e) => {
@@ -115,6 +133,9 @@ document.getElementById("modulo").addEventListener("click", () => {
 <button id = 'calculate-modulo'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("calculate-modulo").addEventListener("click", (e) => {
     e.preventDefault();
     let result;
@@ -134,6 +155,9 @@ document.getElementById("even-odd").addEventListener("click", () => {
 <button id = 'evenodd'>Calculate</button>
 <p id ='result'></p>
 `;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("evenodd").addEventListener("click", (e) => {
     e.preventDefault();
     let result;
@@ -152,6 +176,9 @@ document.getElementById("palindrome").addEventListener("click", (e) => {
 <input type = 'number' id = 'num1' placeholder = 'Number 1'>
 <button id = 'check-palindrome'>Calculate</button>
 <p id ='result'></p>`;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("check-palindrome").addEventListener("click", (e) => {
     e.preventDefault();
     let num1 = parseInt(document.getElementById("num1").value);
@@ -178,6 +205,9 @@ document.getElementById("factorial").addEventListener("click", () => {
 <input type = 'number' id = 'num1' placeholder = 'Number 1'>
 <button id = 'calculate-factorial'>Calculate</button>
 <p id ='result'></p>`;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document
     .getElementById("calculate-factorial")
     .addEventListener("click", (e) => {
@@ -206,6 +236,9 @@ document.getElementById("fibonacci").addEventListener("click", () => {
 <input type = 'number' id = 'num1' placeholder = 'Number 1'>
 <button id = 'calculate-fibonacci'>Calculate</button>
 <p id ='result'></p>`;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document
     .getElementById("calculate-fibonacci")
     .addEventListener("click", (e) => {
@@ -229,6 +262,9 @@ document.getElementById("ArmstrongNum").addEventListener("click", () => {
 <input type = 'number' id = 'num1' placeholder = 'Number 1'>
 <button id = 'check-armstrong'>Calculate</button>
 <p id ='result'></p>`;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("check-armstrong").addEventListener("click", (e) => {
     e.preventDefault();
     let result;
@@ -256,6 +292,9 @@ document.getElementById("perfectNum").addEventListener("click", () => {
 <input type = 'number' id = 'num1' placeholder = 'Number 1'>
 <button id = 'check-perfect'>Calculate</button>
 <p id ='result'></p>`;
+  document.getElementById("num1").addEventListener("input", () => {
+    document.getElementById("result").textContent = "";
+  });
   document.getElementById("check-perfect").addEventListener("click", (e) => {
     e.preventDefault();
     let result;
